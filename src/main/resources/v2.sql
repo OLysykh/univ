@@ -81,6 +81,14 @@ SELECT id
 FROM persons
 WHERE personAge >=20;
 
+  -- populating houses with data
+INSERT INTO houses (houseName,houseFounder,houseAnimal,houseCommonRoom,houseHead_id)
+VALUES
+('Gryffindor','Godric Gryffindor','Lion','Gryffindor Tower',6),
+('Hufflepuff','Helga Hufflepuff','Badger','Hufflepuff Basement',8),
+('Ravenclaw','Rowena Ravenclawr','Eagle','Ravenclaw Tower',7 ),
+('Slytherin','Salazar Slytherin','Snake','Slytherin Dungeon',1 );
+
 -- updating professors academic degree according to age 
 UPDATE professors
 SET  academicDegree = "Architect" 
@@ -200,13 +208,7 @@ SET subject_id = 5
 WHERE subject_id = 1
 LIMIT 2;
  
-  -- populating houses with data
-INSERT INTO houses (id,houseName,houseFounder,houseAnimal,houseCommonRoom,houseHead_id)
-VALUES
-('gr','Gryffindor','Godric Gryffindor','Lion','Gryffindor Tower',6),
-('hu','Hufflepuff','Helga Hufflepuff','Badger','Hufflepuff Basement',8),
-('ro','Ravenclaw','Rowena Ravenclawr','Eagle','Ravenclaw Tower',7 ),
-('sl','Slytherin','Salazar Slytherin','Snake','Slytherin Dungeon',1 );
+
 
 -- JOINS!
  

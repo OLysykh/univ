@@ -6,6 +6,15 @@ public class DayOfWeek {
     private String dayOfWeek;
     private Lessons lessons;
 
+    public DayOfWeek() {
+    }
+
+    public DayOfWeek(long id, String dayOfWeek, Lessons lessons) {
+        this.id = id;
+        this.dayOfWeek = dayOfWeek;
+        this.lessons = lessons;
+    }
+
     public long getId() {
         return id;
     }
@@ -22,5 +31,11 @@ public class DayOfWeek {
         this.dayOfWeek = dayOfWeek;
     }
 
+    public Lessons getLessons() {
+        return lessons;
+    }
 
+    public void setLessons(Lessons lessons) {
+        this.lessons = lessons;
+    }
 }

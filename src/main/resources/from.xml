@@ -1,0 +1,20 @@
+<?xml version = "1.0"?>
+<class>
+  <persons id = "1">
+    <personName>Harry</personName>
+    <personSurname>Potter</personSurname>
+    <personAge>10</personAge>
+  </persons>
+
+  <persons id = "2">
+    <personName>Harry</personName>
+    <personSurname>Styles</personSurname>
+    <personAge>12</personAge>
+  </persons>
+
+  <persons id = "3">
+    <personName>Harry</personName>
+    <personSurname>Kane</personSurname>
+    <personAge>14</personAge>
+  </persons>
+</class>

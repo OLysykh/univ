@@ -8,6 +8,16 @@ public class Subjects {
     private List<Professors> professors;
     private List<Exams> exams;
 
+    public Subjects() {
+    }
+
+    public Subjects(long id, String subjectName, List<Professors> professors, List<Exams> exams) {
+        this.id = id;
+        this.subjectName = subjectName;
+        this.professors = professors;
+        this.exams = exams;
+    }
+
     public long getId() {
         return id;
     }
@@ -22,5 +32,21 @@ public class Subjects {
 
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
+    }
+
+    public List<Professors> getProfessors() {
+        return professors;
+    }
+
+    public void setProfessors(List<Professors> professors) {
+        this.professors = professors;
+    }
+
+    public List<Exams> getExams() {
+        return exams;
+    }
+
+    public void setExams(List<Exams> exams) {
+        this.exams = exams;
     }
 }

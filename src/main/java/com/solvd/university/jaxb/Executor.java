@@ -27,9 +27,9 @@ public class Executor {
         deathStar.setSpecification(specification);
         deathStar.setWeapons(weapons);
 
-        JAXBContext jc = JAXBContext.newInstance(DeathStar.class);
-        Marshaller mar = jc.createMarshaller();
-        mar.marshal(deathStar, new File("result.xml"));
+//        JAXBContext jc = JAXBContext.newInstance(DeathStar.class);
+//        Marshaller mar = jc.createMarshaller();
+//        mar.marshal(deathStar, new File("result.xml"));
 
 //        JAXBContext jk = JAXBContext.newInstance(DeathStar.class);
 //        Unmarshaller unMar = jk.createUnmarshaller();

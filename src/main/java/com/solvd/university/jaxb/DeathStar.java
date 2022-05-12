@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters;
 import java.util.Date;
 import java.util.List;
 
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "DeathStar")
 public class DeathStar {
 

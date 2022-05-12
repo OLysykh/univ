@@ -10,11 +10,13 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
 
-public class PersonsDAO implements IPersonsDAO {
+public class PersonsDAO extends ForAllDAO implements IPersonsDAO {
 
     private static final Logger LOGGER = LogManager.getLogger(PersonsDAO.class);
 
@@ -52,6 +54,7 @@ public class PersonsDAO implements IPersonsDAO {
             pr.setString(1, person.getPersonName());
             pr.setString(2, person.getPersonSurname());
             pr.setLong(3, person.getPersonAge());
+            pr.execute();
         } catch (Exception e) {
             LOGGER.error(e);
         }
@@ -64,6 +67,7 @@ public class PersonsDAO implements IPersonsDAO {
             pr.setString(2, person.getPersonSurname());
             pr.setLong(3, person.getPersonAge());
             pr.setLong(4, person.getId());
+            pr.executeUpdate();
         } catch (Exception e) {
             LOGGER.error(e);
         }
@@ -72,11 +76,30 @@ public class PersonsDAO implements IPersonsDAO {
     public void removePerson(Persons person) {
         try (Connection con = DriverManager.getConnection(url, username, password)) {
             PreparedStatement pr = con.prepareStatement("DELETE FROM persons WHERE id = ?; ");
+            pr.setLong(1, person.getId());
+            pr.execute();
         } catch (Exception e) {
             LOGGER.error(e);
         }
     }
 
+    public List<Persons> getAllPersons() {
+        List<Persons> persons = new ArrayList<>();
+        try {
+            resultSet = getResultSet("SELECT * FROM persons");
+            while (resultSet.next()) {
+                Persons personToAdd = new Persons();
+                personToAdd.setId(resultSet.getLong("id"));
+                personToAdd.setPersonName(resultSet.getString("personName"));
+                personToAdd.setPersonSurname(resultSet.getString("personSurrname"));
+                personToAdd.setPersonAge(resultSet.getInt("personAge"));
+                persons.add(personToAdd);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return persons;
+    }
 
 
 ////    InputStream inputStream = getClass().getResourceAsStream("/db.properties");

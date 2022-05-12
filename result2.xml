@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DeathStar id="1">
+    <manufactureDate>01/00/1970</manufactureDate>
+    <headOfDesign>Harry Kane</headOfDesign>
+    <specification>
+        <ShipClass>Forward</ShipClass>
+        <MaxSpeedinLightSpeed>1.5</MaxSpeedinLightSpeed>
+        <propulsion>Manchester United</propulsion>
+        <widthInKm>160</widthInKm>
+    </specification>
+    <weapons>
+        <weapon type="Turbolasers" quantity="100" typeOfAmmo="high voltage electric power"/>
+        <weapon type="superlaser" quantity="1" typeOfAmmo="red giant star"/>
+        <weapon type="Tractor beams" quantity="2000" typeOfAmmo="liquid metall"/>
+        <weapon type="Ion cannons" quantity="600" typeOfAmmo="nuclear power"/>
+    </weapons>
+</DeathStar>

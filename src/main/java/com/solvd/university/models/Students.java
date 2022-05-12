@@ -12,6 +12,7 @@ public class Students {
     private Persons persons;
     private List<StudentHasLessons> studentHasLessons;
 
+
     public Students() {
     }
 
@@ -88,5 +89,14 @@ public class Students {
 
     public void setStudentHasLessons(List<StudentHasLessons> studentHasLessons) {
         this.studentHasLessons = studentHasLessons;
+    }
+
+    @Override
+    public String toString() {
+        return "Students{" +
+                "id=" + id +
+                ", person_id=" + person_id +
+                ", studentHouse='" + studentHouse + '\'' +
+                '}';
     }
 }

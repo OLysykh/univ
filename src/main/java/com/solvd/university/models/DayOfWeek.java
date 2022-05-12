@@ -9,6 +9,19 @@ public class DayOfWeek {
     public DayOfWeek() {
     }
 
+    public DayOfWeek(long id) {
+        this.id = id;
+    }
+
+    public DayOfWeek(String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+    }
+
+    public DayOfWeek(long id, String dayOfWeek) {
+        this.id = id;
+        this.dayOfWeek = dayOfWeek;
+    }
+
     public DayOfWeek(long id, String dayOfWeek, Lessons lessons) {
         this.id = id;
         this.dayOfWeek = dayOfWeek;

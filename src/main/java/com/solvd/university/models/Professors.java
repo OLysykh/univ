@@ -1,6 +1,6 @@
 package com.solvd.university.models;
 
-public class Professors {
+public class Professors extends Persons{
     private long id;
     private long person_id;
     private int salary;

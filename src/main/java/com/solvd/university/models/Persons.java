@@ -1,5 +1,7 @@
 package com.solvd.university.models;
 
+import java.util.List;
+
 public class Persons  {
     private long id;
     private String personName;
@@ -7,6 +9,7 @@ public class Persons  {
     private long personAge;
     private Professors professor;
     private Students student;
+    private List<Persons> personsList;
 
     public Persons() {
     }
@@ -83,6 +86,14 @@ public class Persons  {
 
     public void setStudent(Students student) {
         this.student = student;
+    }
+
+    public List<Persons> getPersonsList() {
+        return personsList;
+    }
+
+    public void setPersonsList(List<Persons> personsList) {
+        this.personsList = personsList;
     }
 
     @Override

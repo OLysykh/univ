@@ -11,6 +11,21 @@ public class StudentGroups {
     public StudentGroups() {
     }
 
+    public StudentGroups(long id) {
+        this.id = id;
+    }
+
+    public StudentGroups(int studentQuantity, int yearOfStudy) {
+        this.studentQuantity = studentQuantity;
+        this.yearOfStudy = yearOfStudy;
+    }
+
+    public StudentGroups(long id, int studentQuantity, int yearOfStudy) {
+        this.id = id;
+        this.studentQuantity = studentQuantity;
+        this.yearOfStudy = yearOfStudy;
+    }
+
     public StudentGroups(long id, int studentQuantity, int yearOfStudy, List<Students> students) {
         this.id = id;
         this.studentQuantity = studentQuantity;
@@ -48,5 +63,14 @@ public class StudentGroups {
 
     public void setStudents(List<Students> students) {
         this.students = students;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentGroups{" +
+                "id=" + id +
+                ", studentQuantity=" + studentQuantity +
+                ", yearOfStudy=" + yearOfStudy +
+                '}';
     }
 }

@@ -1,22 +1,18 @@
 package com.solvd.university.dao.jdbcMySQLImpl;
 
-import com.solvd.university.Main;
 import com.solvd.university.dao.IPersonsDAO;
 import com.solvd.university.models.Persons;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 import java.util.ResourceBundle;
 
 
-public class PersonsDAO extends ForAllDAO implements IPersonsDAO {
+public class PersonsDAO extends AbstractDAO implements IPersonsDAO {
 
     private static final Logger LOGGER = LogManager.getLogger(PersonsDAO.class);
 

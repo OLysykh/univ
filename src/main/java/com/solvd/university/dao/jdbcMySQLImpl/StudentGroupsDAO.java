@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class StudentGroupsDAO extends ForAllDAO implements IStudentGroupsDAO {
+public class StudentGroupsDAO extends AbstractDAO implements IStudentGroupsDAO {
 
     public StudentGroups getStudentGroupByID(long id) {
         StudentGroups studentGroups = new StudentGroups();

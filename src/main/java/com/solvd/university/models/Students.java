@@ -2,9 +2,11 @@ package com.solvd.university.models;
 
 import java.util.List;
 
-public class Students {
+public class Students extends Persons {
     private long id;
     private long person_id;
+    private long exams_id;
+    private long groups_id;
     private String studentHouse;
     private StudentIdCard studentIdCard;
     private StudentGroups studentGroups;
@@ -16,6 +18,18 @@ public class Students {
     public Students() {
     }
 
+
+    public Students(long id, String studentHouse) {
+        this.id = id;
+        this.studentHouse = studentHouse;
+    }
+
+    public Students(long person_id, String studentHouse, long groups_id) {
+        this.person_id = person_id;
+        this.groups_id = groups_id;
+        this.studentHouse = studentHouse;
+    }
+
     public Students(long id, long person_id, String studentHouse, StudentIdCard studentIdCard, StudentGroups studentGroups, StudentCharacteristics studentCharacteristics, Persons persons, List<StudentHasLessons> studentHasLessons) {
         this.id = id;
         this.person_id = person_id;
@@ -25,6 +39,10 @@ public class Students {
         this.studentCharacteristics = studentCharacteristics;
         this.persons = persons;
         this.studentHasLessons = studentHasLessons;
+    }
+
+    public Students(long id) {
+        this.id = id;
     }
 
     public long getId() {
@@ -91,12 +109,35 @@ public class Students {
         this.studentHasLessons = studentHasLessons;
     }
 
+    public long getExams_id() {
+        return exams_id;
+    }
+
+    public void setExams_id(long exams_id) {
+        this.exams_id = exams_id;
+    }
+
+    public long getGroups_id() {
+        return groups_id;
+    }
+
+    public void setGroups_id(long groups_id) {
+        this.groups_id = groups_id;
+    }
+
     @Override
     public String toString() {
         return "Students{" +
                 "id=" + id +
                 ", person_id=" + person_id +
+                ", exams_id=" + exams_id +
+                ", groups_id=" + groups_id +
                 ", studentHouse='" + studentHouse + '\'' +
+                ", studentIdCard=" + studentIdCard +
+                ", studentGroups=" + studentGroups +
+                ", studentCharacteristics=" + studentCharacteristics +
+                ", persons=" + persons +
+                ", studentHasLessons=" + studentHasLessons +
                 '}';
     }
 }

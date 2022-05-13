@@ -8,19 +8,19 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class SimpleConnection {
+public class SQLСonnection {
 
-    private static final Logger LOGGER = LogManager.getLogger(SimpleConnection.class);
-    private static SimpleConnection instance;
+    private static final Logger LOGGER = LogManager.getLogger(SQLСonnection.class);
+    private static SQLСonnection instance;
 
 
-    private SimpleConnection(){
-        //let`s try it withoun forname
+    private SQLСonnection(){
+        //let`s try it without forname
     }
 
-    public static SimpleConnection newInstance(){
+    public static SQLСonnection newInstance(){
         if (instance == null){
-            new SimpleConnection();
+            new SQLСonnection();
         }
         return instance;
     }

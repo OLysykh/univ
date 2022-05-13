@@ -87,4 +87,6 @@ public class Professors extends Persons{
     public void setSubject_id(long subject_id) {
         this.subject_id = subject_id;
     }
+
+
 }

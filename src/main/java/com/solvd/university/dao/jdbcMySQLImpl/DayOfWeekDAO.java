@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DayOfWeekDAO extends ForAllDAO implements IDayOfWeekDAO {
+public class DayOfWeekDAO extends AbstractDAO implements IDayOfWeekDAO {
 
     public DayOfWeek getDayOfWeekByID(long id) {
         DayOfWeek dayOfWeek = new DayOfWeek();

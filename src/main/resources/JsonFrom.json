@@ -1,0 +1,27 @@
+{
+  "name": "Dynamo Kyiv",
+  "city": "Kyiv",
+  "nickName": "Bilo-syni",
+  "foundationDate": "1927",
+  "stadiumCapacity": 70050,
+  "players": [
+    {
+      "playerName": "Viktor Tsygankov",
+      "playerPosition": "Right Winger",
+      "playerValue": 25.0,
+      "dateOfBirth": "09-15-1997"
+    },
+    {
+      "playerName": "Mykola Shaparenko",
+      "playerPosition": "Central Midfield",
+      "playerValue": 10.0,
+      "dateOfBirth": "10-04-1998"
+    },
+    {
+      "playerName": "Georgiy Bushchan",
+      "playerPosition": "GoalKeeper",
+      "playerValue": 9.0,
+      "dateOfBirth": "05-31-1994"
+    }
+  ]
+}

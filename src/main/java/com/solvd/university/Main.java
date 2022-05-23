@@ -6,7 +6,9 @@ import com.solvd.university.models.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.plaf.nimbus.State;
 import java.io.IOException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -20,6 +22,8 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
+
+
 
 //         //trying to get person from db
 //        IPersonsDAO personsDAOGet = new PersonsDAO();

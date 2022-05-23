@@ -1,1 +1,6 @@
-<?xml version="1.0" ?><Persons id="1"><PersonName>Harry</PersonName><PersonSurname>Potter</PersonSurname><PersonAge>10</PersonAge></Persons>
+<?xml version="1.0" ?>
+<Persons id="1">
+    <PersonName>Harry</PersonName>
+    <PersonSurname>Potter</PersonSurname>
+    <PersonAge>10</PersonAge>
+</Persons>

@@ -1,0 +1,31 @@
+<mapper namespace = "com.solvd.univ.dao.IPersonsDAO">
+
+    <resultMap type="com.solvd.univ.models.Persons" id = "PersonsResultMap" autoMapping = "false">
+        <id column ="id" property="id"/>
+        <result column="personName" property="personName"/>
+        <result column="personSurrname" property="personSurname"/>
+        <result column="personAge" property="personAge"/>
+        <association property = "Professors"
+                     resultMap = "com.solvd.univ.dao.IProfessorsDAO.ProfessorsResultMap"/>
+        <association property = "Students"
+                     resultMap = "com.solvd.univ.dao.IStudentsDAO.StudentsResultMap"/>
+    </resultMap>
+
+    <insert id = "savePerson" useGeneratedKeys="true" keyProperty = "id">
+    <![CDATA[ INSERT INTO persons (personName,personSurrname,personAge) VALUES (#{person.personName}, #{person.personSurrname}, #{person.personAge}) ]]>
+    </insert>>
+
+    <update id = "updatePerson" >
+        <![CDATA[ UPDATE persons SET personName = ${person.personName},personSurrname = ${person.personSurrname},personAge = ${person.personAge} WHERE id = ${person.id}]]>
+    </update>>
+
+    <remove id = "removePerson" >
+        <![CDATA[ DELETE FROM persons WHERE id = ${id}]]>
+    </remove>>
+
+    <select id = "getPersonByID"  resultMap = "PersonsResultMap">
+        <![CDATA[ SELECT * FROM persons  WHERE id = ${id}]]>
+    </select>>
+
+
+</mapper>

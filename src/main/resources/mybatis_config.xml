@@ -1,0 +1,24 @@
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Confi 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties">
+    </properties>
+    <enviroments default="demo">
+        <enviroment id="demo">
+            <transactionManager type="JDBC">
+            </transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/hogwardsv2"/>
+                <property name="username" value="root"/>
+                <property name="password" value="!Panasonic1777!"/>
+        </dataSource>
+        </enviroment>
+    </enviroments>
+    <mappers>
+        <mapper resource = "mappers/PersonsMapper.xml"/>
+
+
+
+
+    </mappers>
+</configuration>

@@ -1,5 +1,6 @@
 package com.solvd.university;
 
+import com.solvd.university.configuration.MyBatisSqlSessionFactory;
 import com.solvd.university.dao.*;
 import com.solvd.university.dao.jdbcMySQLImpl.*;
 import com.solvd.university.models.*;
@@ -23,7 +24,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
+IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
+LOGGER.info(iPersonsDAO.getPersonByID(12));
 
 //         //trying to get person from db
 //        IPersonsDAO personsDAOGet = new PersonsDAO();

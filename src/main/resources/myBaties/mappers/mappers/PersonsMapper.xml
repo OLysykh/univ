@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.solvd.university.dao.IPersonsDAO">
+    <resultMap id = "PersonsResultMap" type="Person" autoMapping = "false" >
+        <id property="id" column ="id" javaType="long"/>
+        <result property="personName" column="personName" />
+        <result property="personSurname" column="personSurrname" />
+        <result property="personAge" column="personAge" javaType="long" />
+<!--        <association property = "Professors"-->
+<!--                     resultMap = "com.solvd.univ.dao.IProfessorsDAO.ProfessorsResultMap"/>-->
+<!--        <association property = "Students"-->
+<!--                     resultMap = "com.solvd.univ.dao.IStudentsDAO.StudentsResultMap"/>-->
+    </resultMap>
+
+    <select id = "getPersonByID"  resultMap = "PersonsResultMap">
+<!--        SELECT * FROM persons WHERE id = #{id}-->
+        <![CDATA[ SELECT * FROM persons  WHERE id = ${id}]]>
+    </select>
+
+<!--    <insert id = "savePerson" useGeneratedKeys="true" keyProperty = "id">-->
+<!--    <![CDATA[ INSERT INTO persons (personName,personSurrname,personAge) VALUES (#{person.personName}, #{person.personSurrname}, #{person.personAge}) ]]>-->
+<!--    </insert>>-->
+
+    <update id = "updatePerson" parameterType="com.solvd.university.models.Persons" >
+        <![CDATA[ UPDATE persons SET personName = ${person.personName},personSurrname = ${person.personSurrname},personAge = ${person.personAge} WHERE id = ${person.id}]]>
+    </update>
+
+<!--    <remove id = "removePerson" >-->
+<!--        <![CDATA[ DELETE FROM persons WHERE id = ${id}]]>-->
+<!--    </remove>>-->
+
+</mapper>

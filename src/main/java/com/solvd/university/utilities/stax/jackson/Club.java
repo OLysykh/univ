@@ -1,4 +1,4 @@
-package com.solvd.university.jackson;
+package com.solvd.university.utilities.stax.jackson;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,4 +1,4 @@
-package com.solvd.university.jaxb;
+package com.solvd.university.utilities.stax.jaxb;
 
 
 import javax.xml.bind.annotation.XmlAccessType;

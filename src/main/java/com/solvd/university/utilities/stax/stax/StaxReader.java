@@ -1,6 +1,5 @@
-package com.solvd.university.stax;
+package com.solvd.university.utilities.stax.stax;
 
-import com.solvd.university.Main;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

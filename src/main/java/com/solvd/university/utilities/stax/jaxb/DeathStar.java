@@ -1,8 +1,7 @@
-package com.solvd.university.jaxb;
+package com.solvd.university.utilities.stax.jaxb;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters;
 import java.util.Date;
 import java.util.List;
 

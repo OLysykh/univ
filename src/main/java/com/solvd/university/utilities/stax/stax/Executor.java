@@ -1,4 +1,4 @@
-package com.solvd.university.stax;
+package com.solvd.university.utilities.stax.stax;
 
 public class Executor {
     public static void main(String[] args) {

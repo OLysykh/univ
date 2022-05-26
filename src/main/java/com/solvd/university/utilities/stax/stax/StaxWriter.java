@@ -1,4 +1,4 @@
-package com.solvd.university.stax;
+package com.solvd.university.utilities.stax.stax;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;

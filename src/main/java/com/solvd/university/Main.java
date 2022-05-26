@@ -2,17 +2,13 @@ package com.solvd.university;
 
 import com.solvd.university.configuration.MyBatisSqlSessionFactory;
 import com.solvd.university.dao.*;
-import com.solvd.university.dao.jdbcMySQLImpl.*;
 import com.solvd.university.models.*;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.swing.plaf.nimbus.State;
 import java.io.IOException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 
 public class Main {
@@ -20,12 +16,31 @@ public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
 
-
-
     public static void main(String[] args) throws IOException {
 
-IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
-LOGGER.info(iPersonsDAO.getPersonByID(12));
+        IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
+        LOGGER.info(iPersonsDAO.getPersonByID(11));
+
+//        IPersonsDAO iPersonsDAO2 = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
+//        iPersonsDAO.updatePerson(new Persons(11, "newName", "newSurname", 22));
+
+
+
+//        MyBatisSqlSessionFactory factory = MyBatisSqlSessionFactory.newInstance("myBaties/mappers/mybatis_config.xml");
+//        SqlSessionFactory sessionFactory = factory.getFactory();
+//        try (SqlSession session = sessionFactory.openSession()){
+//            IPersonsDAO mapper = session.getMapper(IPersonsDAO.class);
+//            Persons person = mapper.getPersonByID(1);
+//            LOGGER.info(person);
+//        }
+
+
+//
+//        IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
+//        iPersonsDAO.savePerson(new Persons("tom", "the cat", 12));
+
+//        IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
+//        LOGGER.info(iPersonsDAO.removePerson(new Persons(12)));
 
 //         //trying to get person from db
 //        IPersonsDAO personsDAOGet = new PersonsDAO();
@@ -55,13 +70,12 @@ LOGGER.info(iPersonsDAO.getPersonByID(12));
 //        }
 
 
-
 //    //StudentGroupsDAO-------------------------------------------------
 //         //trying to get person from db
 //        IStudentGroupsDAO iStudentGroupsDAO= new StudentGroupsDAO();
 //        LOGGER.info(iStudentGroupsDAO.getStudentGroupByID(2));
 
-                // trying to save person to db
+        // trying to save person to db
 //        IStudentGroupsDAO iStudentGroupsDAO = new StudentGroupsDAO();
 //        iStudentGroupsDAO.saveStudentGroup(new StudentGroups(25,7));
 

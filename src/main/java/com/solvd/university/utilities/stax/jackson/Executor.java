@@ -1,9 +1,6 @@
-package com.solvd.university.jackson;
+package com.solvd.university.utilities.stax.jackson;
 
-import com.fasterxml.jackson.core.JacksonException;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.solvd.university.Main;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

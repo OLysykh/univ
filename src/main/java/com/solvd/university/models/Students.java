@@ -13,6 +13,7 @@ public class Students extends Persons {
     private StudentCharacteristics studentCharacteristics;
     private Persons persons;
     private List<StudentHasLessons> studentHasLessons;
+    private List<Persons> personsWhoAreStudents;
 
 
     public Students() {
@@ -39,6 +40,15 @@ public class Students extends Persons {
         this.studentCharacteristics = studentCharacteristics;
         this.persons = persons;
         this.studentHasLessons = studentHasLessons;
+    }
+
+
+    public List<Persons> getPersonsWhoAreStudents() {
+        return personsWhoAreStudents;
+    }
+
+    public void setPersonsWhoAreStudents(List<Persons> personsWhoAreStudents) {
+        this.personsWhoAreStudents = personsWhoAreStudents;
     }
 
     public Students(long id) {

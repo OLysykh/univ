@@ -1,7 +1,11 @@
 package com.solvd.university;
 
-import com.solvd.university.configuration.MyBatisSqlSessionFactory;
+import com.solvd.university.configuration.MyBatisSqlSession;
+//import com.solvd.university.configuration.MyBatisSqlSessionFactory;
 import com.solvd.university.dao.*;
+import com.solvd.university.dao.myBatisImpl.PersonsBatisDAO;
+import com.solvd.university.dao.myBatisImpl.ProfessorsBatisDAO;
+import com.solvd.university.dao.myBatisImpl.StudentsBatisDAO;
 import com.solvd.university.models.*;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -9,6 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public class Main {
@@ -18,22 +23,79 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
-        LOGGER.info(iPersonsDAO.getPersonByID(11));
+//1st pack
+
+  /*      IPersonsDAO iPersonsDAO = new PersonsBatisDAO();
+        LOGGER.info(iPersonsDAO.getPersonByID(12));
+
+        IPersonsDAO iPersonsDAO2 = new PersonsBatisDAO();
+        iPersonsDAO2.savePerson(new Persons("Charle", "Leclerc", 24));
+
+        IPersonsDAO iPersonsDAO3 = new PersonsBatisDAO();
+        iPersonsDAO3.updatePerson(new Persons(1, "Carlos", "Sainz", 26));
+
+        IPersonsDAO iPersonsDAO4 = new PersonsBatisDAO();
+        iPersonsDAO4.removePerson(new Persons(2));
+        */
+
+//2nd pack
+//       IStudetsDAO ist = new StudentsBatisDAO();
+//        LOGGER.info(ist.getStudentByID(1));
+//
+//        IStudetsDAO ist2 = new StudentsBatisDAO();
+//        ist2.saveStudent(new Students(10, "BATIS", 3));
+//
+//        IStudetsDAO ist3 = new StudentsBatisDAO();
+//        ist3.updateStudent(new Students(10, "wowowow"));
+//
+//        IStudetsDAO ist4 = new StudentsBatisDAO();
+//        ist4.removeStudent(new Students(12));
+
+//        IStudetsDAO ist5 = new StudentsBatisDAO();
+//  //      LOGGER.info(ist5.getStudentsWithNames());
+
+
+//3 pack
+
+  /*    IProfessorsDAO ist = new ProfessorsBatisDAO();
+        LOGGER.info(ist.getProfessorByID(1));
+
+        IProfessorsDAO ist2 = new ProfessorsBatisDAO();
+        ist2.saveProfessor(new Professors(49, 999, "dude"));
+
+        IProfessorsDAO ist3 = new ProfessorsBatisDAO();
+        ist3.updateProfessor(new Professors(42,5000));
+
+        IProfessorsDAO ist4 = new ProfessorsBatisDAO();
+        ist4.removeProfessor(new Professors(50));
+*/
+
+
+        //        // trying to save person to db
+//        IDayOfWeekDAO iDayOfWeekDAO = new DayOfWeekDAO();
+//        iDayOfWeekDAO.saveDayOfWeek(new DayOfWeek("Saturday"));
+
 
 //        IPersonsDAO iPersonsDAO2 = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);
-//        iPersonsDAO.updatePerson(new Persons(11, "newName", "newSurname", 22));
-
+//        Persons personsToUpdate = iPersonsDAO2.getPersonByID(11);
+//        personsToUpdate.setPersonName("Test");
+//        personsToUpdate.setPersonSurname("NOtTest");
+//        personsToUpdate.setPersonAge(12);
+//        iPersonsDAO2.updatePerson(personsToUpdate);
 
 
 //        MyBatisSqlSessionFactory factory = MyBatisSqlSessionFactory.newInstance("myBaties/mappers/mybatis_config.xml");
-//        SqlSessionFactory sessionFactory = factory.getFactory();
-//        try (SqlSession session = sessionFactory.openSession()){
+//        try (SqlSession session = factory.getFactory().openSession()) {
 //            IPersonsDAO mapper = session.getMapper(IPersonsDAO.class);
-//            Persons person = mapper.getPersonByID(1);
-//            LOGGER.info(person);
+//            LOGGER.info(mapper.getPersonByID(11));
+//            mapper.updatePerson(new Persons(11, "whyNo2?", "newSurname", 22));
+//            LOGGER.info(mapper.getPersonByID(12));
+//            session.commit();
+//
 //        }
 
+
+        // __---__---__---__---__---__---__---__---__---__---__---__---__---__---__---__---__---__---__---__
 
 //
 //        IPersonsDAO iPersonsDAO = MyBatisSqlSessionFactory.openSession().getMapper(IPersonsDAO.class);

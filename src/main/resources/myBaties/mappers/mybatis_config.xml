@@ -4,19 +4,24 @@
     <properties resource="dbFiles/db.properties"/>
     <typeAliases>
         <typeAlias type="com.solvd.university.models.Persons" alias="Person"/>
+        <typeAlias type="com.solvd.university.models.Students" alias="Student"/>
+        <typeAlias type="com.solvd.university.models.Professors" alias="Professors"/>
     </typeAliases>
-    <environments default="demo">
-        <environment id="demo">
+    <environments default="sexy">
+        <environment id="sexy">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="${db.driver}"/>
                 <property name="url" value="${db.url}"/>
                 <property name="username" value="${db.username}"/>
                 <property name="password" value="${db.password}"/>
-        </dataSource>
+            </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource = "myBaties/mappers/mappers/PersonsMapper.xml"/>
+        <mapper resource="myBaties/mappers/mappers/PersonsMapper.xml"/>
+        <mapper resource="myBaties/mappers/mappers/StudentsMapper.xml"/>
+        <mapper resource="myBaties/mappers/mappers/ProfessorsMapper.xml"/>
+
     </mappers>
 </configuration>

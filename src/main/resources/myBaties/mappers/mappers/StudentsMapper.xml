@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.solvd.university.dao.IStudetsDAO">
+    <resultMap id="StudentsResultMap" type="Student" autoMapping="false">
+        <id column="id" property="id" javaType="long"/>
+        <result column="person_id" property="person_id" javaType="long"/>
+        <result column="studentHouse" property="studentHouse"/>
+        <result column="groups_id" property="groups_id" javaType="long"/>
+        <result column="exams_id" property="exams_id" javaType="long"/>
+<!--        <association property="PersonsResultMap"-->
+<!--                     column="person_id"-->
+<!--                     javaType="com.solvd.university.models.Persons"-->
+<!--                     select="myBaties.mappers.mappers.PersonsMapper.getPersonByID"-->
+<!--                     fetchType="eager" />-->
+<!--        <collection property="Students" javaType="List" column="id"  select="getStudentsWithNames"/>-->
+
+
+    </resultMap>
+
+    <select id="getStudentByID" resultMap="StudentsResultMap">
+        <![CDATA[ SELECT * FROM students  WHERE id = #{id}]]>
+    </select>
+
+    <insert id="saveStudent" useGeneratedKeys="true" keyProperty="id" parameterType="Student">
+        <![CDATA[ INSERT INTO students (person_id,studentHouse,groups_id)
+    VALUES (#{person_id}, #{studentHouse}, #{groups_id}) ]]>
+    </insert>
+
+
+    <update id="updateStudent" parameterType="Student">
+        UPDATE students SET studentHouse = #{studentHouse}
+        WHERE id = #{id}
+    </update>
+
+
+    <delete id="removeStudent" parameterType="Student">
+        <![CDATA[ DELETE FROM students WHERE id = ${id}]]>
+    </delete>
+
+<!--    <select id="getStudentsWithNames" resultMap="StudentsResultMap">-->
+<!--        SELECT * FROM students  LEFT JOIN persons on person_id = #{id}-->
+<!--    </select>-->
+
+
+</mapper>

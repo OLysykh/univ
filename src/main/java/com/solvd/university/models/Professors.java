@@ -13,6 +13,21 @@ public class Professors extends Persons{
     public Professors() {
     }
 
+    public Professors(long id) {
+        this.id = id;
+    }
+
+    public Professors(long id, int salary) {
+        this.id = id;
+        this.salary = salary;
+    }
+
+    public Professors(long person_id, int salary, String academicDegree) {
+        this.person_id = person_id;
+        this.salary = salary;
+        this.academicDegree = academicDegree;
+    }
+
     public Professors(long id, long person_id, int salary, String academicDegree, Persons person, Houses house, Exams exam, long subject_id) {
         this.id = id;
         this.person_id = person_id;
@@ -23,6 +38,8 @@ public class Professors extends Persons{
         this.exam = exam;
         this.subject_id = subject_id;
     }
+
+
 
     public long getId() {
         return id;
@@ -88,5 +105,13 @@ public class Professors extends Persons{
         this.subject_id = subject_id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Professors{" +
+                "id=" + id +
+                ", person_id=" + person_id +
+                ", salary=" + salary +
+                ", academicDegree='" + academicDegree + '\'' +
+                '}';
+    }
 }

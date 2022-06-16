@@ -1,19 +1,14 @@
 package com.solvd.university;
 
-import com.solvd.university.configuration.MyBatisSqlSession;
 //import com.solvd.university.configuration.MyBatisSqlSessionFactory;
-import com.solvd.university.dao.*;
-import com.solvd.university.dao.myBatisImpl.PersonsBatisDAO;
-import com.solvd.university.dao.myBatisImpl.ProfessorsBatisDAO;
+import com.solvd.university.dao.IStudetsDAO;
 import com.solvd.university.dao.myBatisImpl.StudentsBatisDAO;
-import com.solvd.university.models.*;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
+import com.solvd.university.patterns.daoFactory.ConnectionFactory;
+import com.solvd.university.patterns.daoFactory.DAOTypes;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.util.List;
 
 
 public class Main {
@@ -22,6 +17,8 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
+
+
 
 //1st pack
 
@@ -41,6 +38,10 @@ public class Main {
 //2nd pack
 //       IStudetsDAO ist = new StudentsBatisDAO();
 //        LOGGER.info(ist.getStudentByID(1));
+
+//        IStudetsDAO jdbc = ConnectionFactory.getIstudentDAO(DAOTypes.JDBC);
+//        jdbc.getStudentByID(1);
+
 //
 //        IStudetsDAO ist2 = new StudentsBatisDAO();
 //        ist2.saveStudent(new Students(10, "BATIS", 3));

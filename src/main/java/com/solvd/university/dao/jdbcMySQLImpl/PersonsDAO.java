@@ -98,7 +98,7 @@ public class PersonsDAO extends AbstractDAO implements IPersonsDAO {
     }
 
 
-////    InputStream inputStream = getClass().getResourceAsStream("/db.properties");
+////    InputStream inputStream = getClass().getResourceAsStream("/db_en_US.properties");
 ////    Properties p = new Properties();
 ////    p.load(inputStream);
 ////    String url = p.getProperty("db.url");
